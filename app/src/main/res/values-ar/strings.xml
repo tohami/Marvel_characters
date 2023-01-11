@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الاخبار</string>
+
+    <string name="somethingWrong">نأسف حدث خطأما</string>
+    <string name="noInternet">لا يوجد اتصال بالانترنت, تحقق من اتصالك بالانترنت واعد المحاوله</string>
+
+    <string name="comics">Comics (%s)</string>
+    <string name="stories">Stories (%s)</string>
+    <string name="events">Events (%s)</string>
+    <string name="characters">Characters (%s)</string>
+    <string name="filter">تنقية</string>
+    <string name="share">مشاركة</string>
+
+    <string name="envents_clicked">Events item clicked</string>
+    <string name="character_clicked">News item clicked</string>
+    <string name="leadership_clicked">Leadership item clicked</string>
+    <string name="maps_clicked">Map item clicked</string>
+    <string name="share_article_chooser_header">Share Article</string>
+    <string name="filter_clicked">Filter clicked</string>
+
+</resources>

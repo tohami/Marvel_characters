@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_very_small">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/character_list_item_corner_redius">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:visibility="visible"
+                tools:ignore="UnusedAttribute">
+
+                <ImageView
+                    android:id="@+id/iv_comic_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/character_list_image_size"
+                    android:src="@drawable/character_temp_image"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    app:civ_border_width="@dimen/character_list_image_border_width"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_comic_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/margin_very_small"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/mid_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_comic_image" />
+                
+                <TextView
+                    android:id="@+id/tv_comic_characters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="@dimen/margin_very_small"
+                    app:layout_constraintTop_toBottomOf="@id/tv_comic_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_comic_title"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="14 Character" />
+
+                <TextView
+                    android:id="@+id/tv_comic_events"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:paddingHorizontal="@dimen/margin_very_small"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_comic_characters"
+                    app:layout_constraintEnd_toStartOf="@id/tv_comic_stories"
+                    app:layout_constraintStart_toEndOf="@id/tv_comic_characters"
+                    app:layout_constraintTop_toTopOf="@+id/tv_comic_characters"
+                    tools:ignore="RtlCompat"
+                    tools:text="8 Events" />
+
+                <TextView
+                    android:id="@+id/tv_comic_stories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:paddingHorizontal="@dimen/margin_very_small"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_comic_characters"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_comic_characters"
+                    tools:ignore="RtlCompat"
+                    tools:text="8 Stories" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</FrameLayout>
+
